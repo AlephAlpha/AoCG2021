@@ -1,8 +1,8 @@
-# [Wolfram Language (Mathematica)], 70 bytes
+# [Wolfram Language (Mathematica)], 68 bytes
 
-    Array[c=Characters@#;""<>c[[Span@##]]==="nice"&,{1,1,1}Length@c,1,Or]&
+    Array[c=Characters@#;""<>c[[Span@##]]==="nice"&,0{,,}+Tr[1^c],1,Or]&
 
-[Try it online!][TIO-kwbigkzq]
+[Try it online!][TIO-kwgjfvy3]
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwbigkzq]: https://tio.run/##RYvBCsIwEER/JSSQU0U8a0rEq6DiMeSwLlubQ6PEFGpLvz2mUXD2sDP7djqILXUQHUJqmEr7EOBtUB1aCICRwkuLLee7Go25PsFrIaxVSnHvkLispk2VZz6Sv8dWYw6nYGU6B@ejEWxVs0vvKJrG5J5lkq01m77linH/cCP2xcKi5T5mFZYDEhU4lI8bLsv5X7fwvxuIz@kD "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kwgjfvy3]: https://tio.run/##TU5NSwMxEL3vrxiysGgb0V5TU1a8eWlhewsRxpDYIJuUJMXdlv72Nd0o@C7z5n0M02M66B6TVTjdLWB/Cg68MRB9r8F5G0f4xuCs@4ywuK@2xohudAkHxpTv5XpWdhgSYwm/9K/QpZAbb946xuLMs1EZ4NNLCDgKxV8PGFAlHWJbrwl53ighuiO6tq6l5JwTZ5UmDX26UHpd7oNYvStJV3QbZDPt8sUkanjYgBE5Dw08ttWldGgFJD9@VqfC8Yabc84obt6U1sUeSuhDzdO6vwtz5h8dNLlOPw "Wolfram Language (Mathematica) – Try It Online"

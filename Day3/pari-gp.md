@@ -1,8 +1,8 @@
-# [Pari/GP], 98 bytes
+# [Pari/GP], 91 bytes
 
-    f(n)=if(n,v=Vec(s=f(n-1));c=v[k=1];[if(c==d,k++,s=Str(k,s,c);c=d;k=1)|d<-v[2..#v]];Str(k,s,c),"1")
+    f(n)=if(n,v=Vec(s=f(n-1));c=k=0;[if(c==d,k++,k&&s=Str(k,s,c);c=d;k=1)|d<-v];Str(k,s,c),"1")
 
-[Try it online!][TIO-kwbkbdff]
+[Try it online!][TIO-kwgkfdxv]
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwbkbdff]: https://tio.run/##Rc3BCsMgEATQX5H0skvWUHsrdr@i0It4CNoUEaxo8NR/t@aUyzAwDyavJchP7n2DhBxGUuPX20Hl0aVC1I6biaysNmN2zJ7iPFPl514gUiV3EK8HwZ9/yGZuy3Jp1uoT0KQm7Nu3QBIsriTuJHIJaYfjFrH/AQ "Pari/GP – Try It Online"
+[TIO-kwgkfdxv]: https://tio.run/##RY2xCsMgFEV/RTKE98gT4ljs/YpCltIhaFNEsKIhU//dminL4cK5cPJagv7k1jZKjNApB5a3o4q@tWG2DhGzfXbnAC9xmiSOY8VjLxSlijsv3kYY/vm7Pl72MjKYgdv2LZQU1CzqJiqXkHY6e8ztDw "Pari/GP – Try It Online"
