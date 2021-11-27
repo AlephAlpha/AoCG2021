@@ -1,8 +1,10 @@
-# [Wolfram Language (Mathematica)], 80 bytes
+# [Wolfram Language (Mathematica)], 76 bytes
 
-    Map[t=0;((t=⌊(3Mod[t-#,8]+9)/5⌋+#)&/@Mod[2ToCharacterCode@#+2,30];t~Mod~8)&]
+    Map[t=0;((t=⌊.6Mod[t-#,8]+1.8⌋+#)&/@Mod[2LetterNumber@#+2,22];t~Mod~8)&]
 
-[Try it online!][TIO-kwed5bfl]
+[Try it online!][TIO-kwhfkfwh]
+
+A port of my PARI/GP answer.
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwed5bfl]: https://tio.run/##JYlLCoMwFACvEhIQxYiiFCxiEXzLCCU0K8ki@EEX1iLZiR6g9ZReJNV2VsPMoHTXDEr3lTItSk2hXqVOg8S2dbpvbzsqxrrUHqGxdK@Of9m3j0scy8/OHj7GvFOTqnQz5WPdZMQNaRTIRK/HXmPHkuY@9U9dEuTdUFsSKZGF/AzNMxaMYYow5wBwChMcfkUcAF4omo/J@ZmAMSH@ygA4FwIvi/kC "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kwhfkfwh]: https://tio.run/##JYnBCoIwGIBfZWwghlNrhxDE8LDjjBjsNHZYNcmDFfJ3En2A8il9kaX1nT6@r7Vwc62F5mJ9jQpf2aeGYpuHIRTz9E721eOqISY0M9EuyebpE5FNkJZrZsIBuO74as@uK0nEKGMmh3F5Y7YJjD91zR00QfEB1ZoYgwKUlqjvsRICU4Sl5JyvIpTkv6IWOB4o6pcp5Zq4EEr9VXAupVJ4GPwX "Wolfram Language (Mathematica) – Try It Online"

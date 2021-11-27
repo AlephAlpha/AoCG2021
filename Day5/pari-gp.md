@@ -1,8 +1,10 @@
-# [Pari/GP], 174 bytes
+# [Pari/GP], 154 bytes
 
-    (w,g)->r=w;forperm(w,u,forpart(p=#w,i=1;q=[t|s<-Vec(p),vecsum(t=Vec(u[i..(i+=s)-1]))*g==vecsum(w)];if(#q==#p,[if(#t<#r||(#t==#w&&vecprod(t)<vecprod(r)),r=t)|t<-q]),,[g,g]));r
+    (w,g)->r=w;s=vecsum;p=vecprod;forperm(w,a,forpart(b=#w,i=1;e=[d|c<-Vec(b),s(d=Vec(a[i..(i+=c)-1]))*g==s(w)];#e-g||[#d==#r&&p(d)<p(r)||#d<#r&&r=d|d<-e]));r
 
-[Try it online!][TIO-kwftps3x]
+[Try it online!][TIO-kwh9lgho]
+
+First iterates over all the permutations of the input, and then iterates over the partitions of each permutation, and then filter out the correct partitions. Very slow. Timeout for most test cases.
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwftps3x]: https://tio.run/##VYzhasMwDIRfxTRQrFUuZB2FkaiPsT/GP0yWGEO6OopTM8i7Z/ZYxwYH@u50UrDslQvbIGiTCR2oC1NqhhuHnq85WbCw5SgDVQk91c1EOq5zq976TgbAe9/Ny1VGKn7R/niU/kAzqNoAPDmin0IC0/hBVhNRFVAXjG3F65pnjtJ@n4uBb@8yQvtABkCmCGts1WQAUTt0@W/Dmw1h/JRWqIsI7D9ixl0xO9HZcZQDCpuPhda6RpH1/K3zH70aFCdTKr/r00Mv/0sGti8 "Pari/GP – Try It Online"
+[TIO-kwh9lgho]: https://tio.run/##VYvBasMwDEB/xdRQpM0uZB2F4aifsYvxwbWdYEhXo3QLA/97Fg82NniHJ@mpeM56LOsgaIVFjajPTIuZ6SOF@f1qSpPCt2iGG5fE1y3yqrnnO1xILipTZxLZWEOvX1OAC6oZIjX1Nh8OkB8poO4c4sNINMOCzsikx1qtjESS9/sCEfsCjLXK2LcNU6yx12n7Mrz6UqZP8EKfReH8dt9014adCH6aYFDCIyphre2U2Hj65vSHF6fE0bXk93z84fl/5HD9Ag "Pari/GP – Try It Online"

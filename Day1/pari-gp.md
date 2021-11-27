@@ -4,11 +4,9 @@
 
 [Try it online!][TIO-kwbgx7mz]
 
-## Explanation
+First we need to convert the input string to a list of `1, I, -1, -I`'s. The ASCII codes of `<^>v` is `[60, 94, 62, 118]`, which become `[5, 6, 7, 8]` when modulus 11. We only need to take the exponent with base `I`. This is `[I^c|c<-Vec(Vecsmall(s))%11]`. For example, the input `v>^>v<^<` would become `[1, -I, -1, -I, 1, I, -1, I]`.
 
-First we need to convert the input string to a list of `1, I, -1, -I`'s. The ASCII code of `<^>v` is `[60, 94, 62, 118]`, which become `[5, 6, 7, 8]` when modded 11. We only need to take the exponent with base `I`. This is `[I^c|c<-Vec(Vecsmall(s))%11]`.
-
-After that, we need to split the list into chunks and take the cumsum. Unfortunately PARI/GP doesn't have many built-ins for list manipulation (unlike Mathematica). But we have polynomials and power series. `Ser` converts the list to a power series, and `/(1-x^i)` does exactly the job we want: split the list into chunks of length `i` and take the cumsum.
+After that, we need to split the list into chunks and take the cumsum. Unfortunately PARI/GP doesn't have many built-ins for list manipulation (unlike Mathematica). But we have polynomials and power series. `Ser` converts the list to a power series, so `[1, -I, -1, -I, 1, I, -1, I]` becomes `1 - I*x - x^2 - I*x^3 + x^4 + I*x^5 - x^6 + I*x^7 + O(x^8)`. And `/(1-x^i)` does exactly the job we want: split the list into chunks of length `i` and take the cumsum. For example, when `i = 3`, `/(1-x^3)` of the above sequence is `1 - I*x - x^2 + (1 - I)*x^3 + (1 - I)*x^4 + (-1 + I)*x^5 - I*x^6 + x^7 + O(x^8)`. `[[1, -I, -1], [1 - I, 1 - I, -1 + I], [-I, 1]]` is exactly the (column-wise) cumsum of `[[1, -I, -1], [-I, 1, I], [-1, I]]`.
 
 Then we convert the power series back to a list with `Vec(...,#s+1)`. The length of the power series is `#s` (the length of the input). We add 1 to it, so that the resulting array includes an extra `0`, which represents the Santa's starting point.
 
