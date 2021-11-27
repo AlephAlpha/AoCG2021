@@ -1,8 +1,12 @@
-# [Wolfram Language (Mathematica)], 174 bytes
+# [Wolfram Language (Mathematica)], 109 bytes
 
-    MorphologicalComponents[#,CornerNeighbors->1<0]//.m_:>Fold[If[{0,#2}~SubsetQ~Extract[#,#-{0,1}&/@Position@##],RotateLeft/@(d=#/.j_/;j!=#2->0)+#-d,#]&,m,Union@@m]/.k_/;k>0->1&
+    #//.x_:>(x-#+RotateLeft/@#&)@ImageData@SelectComponents[Image@x,#BoundingBox[[1,1]]>0&,CornerNeighbors->1<0]&
 
-[Try it online!][TIO-kwghdyx3]
+[Try it online!][TIO-kwhvk914]
+
+Repeatedly select the components whose bounding box's `x_min` is greater than 0, and move these components 1 unit to the left.
+
+The `SelectComponents` function has a bug: when it takes an array instead of an image as input, the `CornerNeighbors` option does not work. So we have to convert the input into an image.
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwghdyx3]: https://tio.run/##bY5hS8MwEIb/SiRQJqZNuo9qS2E4EFSmsk8ljGxN125NbqQRhJL99ZqBOFKE4z7cc8@9p4RtpBK23YmxRtn4CubUQAd7P@gWoE6gpbZ9ickCjJbmTbb7Zgumj/P0kXFKE7W5z5fQVeVzXQ6M4Lk7f35te2nfz0/f1oid9TKOPUpdRIsV9K1tQRcYc/IBVlj5ImtLi1mVYZocNvThcJPheZyz2zscVwTziCiy1henUJwmR79yzJl/IBpXptX@PopzVJeYcxQhWqBhGFKCfLGwM0fQwP4j6S/5qyu8kIkQOpModnXS8FroTKJCJ4hyzo0/ "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kwhvk914]: https://tio.run/##fY1vS8MwEIff71OEBopiZpO3Q0vYRBj4D@e7NEicaVcwF8luECj97LUqTBtEOO7gnnvu5wzurDPYbs1Qk8uBFsV5fF6UJ3FOzx49GrQ3tsZC0vxUrp1p7JVBIzf2zW5x5d27Bwu4V19IRkaX/gCvLTRLH5USTGhd8pytfAAb7mzb7F582M9LccF1PjyEFlBla1hUUEHGyJPf4Lhr1K0ZZ7z2wSmqNSNZBfcH/O@s/jzUmuSkkLOu6wQjY/Fp5z2bEdLxv5g4smP94G@WSKmXRPLfnpj@TL0kMvUmkX3fDx8 "Wolfram Language (Mathematica) – Try It Online"

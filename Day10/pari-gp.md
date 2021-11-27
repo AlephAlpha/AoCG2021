@@ -1,8 +1,8 @@
-# [Pari/GP], 94 bytes
+# [Pari/GP], 90 bytes
 
-    s->a=b=c=0;[if(a,a=0,if(d=="!",a=1,if(b,d==">"&&b=0,if(d=="<",b=1,d=="{"&&c++))))|d<-Vec(s)];c
+    s->a=b=0;#[1|d<-Vec(s),if(a,a=0,if(d=="!",!a=1,if(b,d==">"&&b=0,if(d=="<",!b=1,d=="{"))))]
 
-[Try it online!][TIO-kwfrmr7q]
+[Try it online!][TIO-kwhl8m5e]
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwfrmr7q]: https://tio.run/##ZY1BDsIgEEWvArMwbTpNdC1wDDdNF0Bb08RUIm4a5Ox1Rqs1kQD5/70hBHsb63NYBqGXWBurnfZ6f2zGobBo9R4pdFqDBGoHbg65G9jt3KYVoCPNMZHxVVXSenSqPvW@iGV79IsN4TIXUdRGhNs43SkCFxADTZQoGkgZUEBKKec1ZUz5C5E3uzdRGzErsQZ/zvqQE/7dHylf4PfepCQkDSPnSVGRhir9TJMM5j4qpaYrZZkVfdiWyxM "Pari/GP – Try It Online"
+[TIO-kwhl8m5e]: https://tio.run/##ZY3LCoMwEEV/JZmCKIyg6yb5jG7EReKjCMUG7UbSfLudaW0VGpJw7zkJ4@005Fe/9kKvc26sdro4n6ry2ar80jXpnOHQpxatLji0WoMElFaXXB0yMJAkbveKvCPPOUBGq16t97clnUVuhJ@G8UERuIDoaUSGooIQAQWEEGLcUsQQfxB5s/sQtROzEWvwcLaPnPDv/kr5Bsd7l5KQNIxcQ4qKNFRpMr1ksHSzUmq8U5ZR0cA6W18 "Pari/GP – Try It Online"

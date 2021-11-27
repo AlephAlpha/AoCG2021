@@ -1,8 +1,10 @@
-# [Wolfram Language (Mathematica)], 69 bytes
+# [Wolfram Language (Mathematica)], 68 bytes
 
-    Fold[StringDelete,#,{"!"~~_,"<"~~Shortest@___~~">"}]~StringCount~"{"&
+    Fold[StringDelete,#,{"!"~~_,"<"~~Shortest@__~~">"}]~StringCount~"{"&
 
-[Try it online!][TIO-kwfqdx0s]
+[Try it online!][TIO-kwhkrwcf]
+
+Mathematica has built-in regular expression support, but calling the function `RegularExpression` already takes 17 bytes.
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwfqdx0s]: https://tio.run/##ZY1BCoMwEEWvkozgKqUXSIPQ0nXBpUhIbVoFNaDpooTk6nZSbRUKM5P/358wnbK17pRtKjXdyWE6m/ZW5HZo@sdJt9pqljAHFEKQDDg@eW0Gq0ebSSlDAAG@DPP@0Tx7G8BBOl3Q2yIhO0HuRVKWJCX7jDhwHhgB55z3i/LM@R9ksWI2E74SsRAl2KaXj1Gxv/kN6Qds5xpSRFREdK0wQkMFWryMmxG89Mg57w1q6jke9NMb "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kwhkrwcf]: https://tio.run/##ZY1BCoMwEEX3niIZwVVKL5AGoaXrgksRsTZWQQ1ouighuXo6aWsVCjOT/9@fMEOlWzlUuqsr35CDP6v@lmd66sb7SfZSSxYzAxScKxlwfLJWTVrOOi1L50CALdxn/ageo3ZgIPEX9DqPyU6QJo@LgiRkn0YGjAUWETDGWLtIy4xdMQsV0i/iKxILqgTb9PI3SPY3fyl9k@3cpBQZFYFda8zQUIEWr@NqAE85c85HhZpajjetfwE "Wolfram Language (Mathematica) – Try It Online"
