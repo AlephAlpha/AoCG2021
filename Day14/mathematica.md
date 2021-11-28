@@ -1,8 +1,8 @@
-# [Wolfram Language (Mathematica)], 387 bytes
+# [Wolfram Language (Mathematica)], 378 bytes
 
-    (Clear@A;P=ToExpression@StringSplit@#;S=A/@{Z=0,1};(#@_=0;#@p=#[[1]];#@i_?NumberQ:=i;#@C={};#@N=1)&/@S;While[#@C!={}||P[[#@N,1]]=!=rcv&/@Or@@S&&Z<1,While[0<#@N<=Length@P||0>++Z,P[[#@N]]/.{i_,x_,y_:0}:>Switch[i,set,#@x=#@y,add,#@x+=#@y,mul,#@x*=#@y,mod,#@x=#@x~Mod~#@y,jgz,#@x>0&&(#@N+=#@y-1),snd,(1-#&/@#)@C~AppendTo~#@x,rcv,If[#@C!={},{{#@x},#@C}=#@C~TakeDrop~1,Break[]]];#[N]++]&/@S])&
+    (Clear@A;P=ToExpression@StringSplit@#;S=A/@{0,1};Z=1>0;(#@_=0;#@p=#[[1]];#@i_?NumberQ:=i;#@C={};#@N=1)&/@S;While[#@C!={}||P[[#@N,1]]=!=rcv&/@Or@@S&&Z,While[Z=0<#@N<=Length@P,P[[#@N]]/.{i_,x_,y_:0}:>Switch[Y=#@y;i,set,#@x=Y,add,#@x+=Y,mul,#@x*=Y,mod,#@x=#@x~Mod~Y,jgz,#@x>0&&(#@N+=Y-1),snd,(1-#&/@#)@C~AppendTo~#@x,_,If[#@C!={},{{#@x},#@C}=#@C~TakeDrop~1,Break[]]];#[N]++]&/@S])&
 
-[Try it online!][TIO-kwj059ls]
+[Try it online!][TIO-kwj9m6vt]
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwj059ls]: https://tio.run/##fVFrb9owFP3eX@ESKYJhRgwUysPMlG3SpI0xBWkSUYQcYsArkCikG10If53dNKQO6kS@5Jz7OPee6w0PV2LDQznnp8@InorDteABG3THdOJ92vuB2O2kt2VmGMjt0vTXMmRa16SDKoum1MAk7hY1NqNGV2M@1SyL2DZAOfsweto4IvjRoRL4kEYx/EaUlPQqM7s/V3ItLIjfQuJwGFuARxh66S0N5r@h5nvAmKnr0x7BabHRg5Ie/Sq2y3DFxoeD0S@Xpzhtte3q@0jO8H6Gn2cdI@70zT8ynK8siXcixBrbU409Y@66CS6/kM3TOiHvUuK556r98ZvnHpPYr@XfJNY3dB08jl66KqSEd1sXF0lFgy21EhseB74vtu7Eg6Y9hu3xl0VmDUcRBGOQGcbQPjxO@KP4GHj@keCHQPBHy07uZY3sctlOLmOXdHiHKruJogLMQaSAbxB6gTUF/RTCLMQVdBScK@gWYsCgJkIkUT0TBMYzdbgE8hFppQxsA/NVimej4XwgUSGqDlgux19z6TBSaynqo@a9kZ93f2fcnbkHljIn52Vq7VajraSTSL3xv/pE23ldFzIOIgZ86lrOle3binFUf3PLJO5cuFog49Ji89pbpMYvnGViqSsnf/OG2pnnnylXRLIlc8bStcgVl4S8UU4yC8g08weokHYhjk//AA "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kwj9m6vt]: https://tio.run/##fVFhb9owFPzeX@ESKSrDjBgoFFIzU7ZJkzbGFKQJoihyiAGvQKKQbnRp8tfZS9M0QZ3Il9x773x@d97ycC22PJQLfvyM6PFqtBE8YEN9Qqfep4MfiP1eejtmhIHcrQx/I0Om6AYdNlikYRLrc0oGmn6lMJtqusJ8qpgmsSyA0v4wftg6IvjRpxLqEY1i@I0pqaoNZug/13IjTOhfwuDpaWICHmM4Sy9psPgNnO8BY4aqznFGnVPtFii39KvYrcI1m@DsjGU13kfSxgcbP9p9Le4PjD8yXKzNGVXYoy7xXoRYYQc6w9x1U1QDuH3YpPBdCr3nLrAPyTfPTWb41@pv2hloqgrWxsCvkyre71x8ReoKrKZU2SgZ@r7YuVMvASq28Zdl7gZHEbRikBjFoDpKpvxefAw8PyH4LhD83rTSiMyxVatZaRhWVYX4G@wiiipwCyIVfIHQM2wW0M8ghIN4AZ0CLgroVmLAoCZCJFErF4SK5@qQAPIR6WYVWIbKL0Y8vxpCA4k6KXhQlWb8dZZdRprdovRR50Yr33dzrV2/1B5Yyp28LNPsddu9QjrttNr/46fazuu6MHEQ0eAr0nLObN8rKo5ab7JM@86JqyXSTi12zr1FZvzEWS6WuXLKmbeLnXn5mUokki9ZMpatRc64JOSNcjpZwqRTDqBOepU4Pv4D "Wolfram Language (Mathematica) – Try It Online"
