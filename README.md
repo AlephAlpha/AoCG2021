@@ -18,5 +18,6 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 | Day10 |  [90](Day10/pari-gp.md) |  [68](Day10/mathematica.md) |
 | Day11 |  [32](Day11/pari-gp.md) |  [44](Day11/mathematica.md) |
 | Day12 | [195](Day12/pari-gp.md) | [109](Day12/mathematica.md) |
+| Day13 |  [67](Day13/pari-gp.md) |  [51](Day13/mathematica.md) |
 
 [Advent of Code Golf 2021]: https://codegolf.meta.stackexchange.com/questions/24068/announcing-advent-of-code-golf-2021-event-challenge-sandbox
