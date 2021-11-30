@@ -6,7 +6,7 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 
 |       |                 PARI/GP |                 Mathematica |
 | :---- | ----------------------: | --------------------------: |
-| Day1  |   [89](Day1/pari-gp.md) |  [106](Day1/mathematica.md) |
+| Day1  |   [89](Day1/pari-gp.md) |  [103](Day1/mathematica.md) |
 | Day2  |   [71](Day2/pari-gp.md) |   [68](Day2/mathematica.md) |
 | Day3  |   [91](Day3/pari-gp.md) |   [83](Day3/mathematica.md) |
 | Day4  |   [66](Day4/pari-gp.md) |   [54](Day4/mathematica.md) |
