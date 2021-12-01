@@ -1,23 +1,10 @@
-# [Pari/GP], 65 bytes
+# [Pari/GP], 140 bytes
 
-    a->for(i=1,c=a[m=vecsort(-a,,1)[1]],a[(m+i-1)%#a+1]+=1);a[m]-=c;a
+    n->a=Map([p=i=0,r=d=j=1;1,0]);while(mapget(a,p)<n,p+=d*=I^(i++==j^2\4+1&&j++);mapput(a,p,r=sum(j=1,4,if(mapisdefined(a,q=p+I^j,&z),z,0))));r
 
-[Try it online!][TIO-kwhj3ldq]
+[Try it online!][TIO-kwhhvdd2]
 
-[Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwhj3ldq]: https://tio.run/##HczdCsIwDAXgVwkToWEpLP6gMrIXKbkIw0lBXalD8Olrt5vA4TsnyXL0j1QmkGJ@mObsojCNYuEl3/v4mfPivBExBlYlC@7VRs@431nL2gpjX6vqZeytWErPnzPwA2yfQIAJrgQpx/dSoVmpAaswOUNEghA6ggPBhaDTGo@0bk7bPRPcKqpi@QM "Pari/GP – Try It Online"
-
----
-
-# [Pari/GP], 71 bytes
-
-    a->c=a[m=vecsort(-a,,1)[1]];a+Vecrev((1/(1-x)%x^c-c/x)*x^m%(1-x^#a),#a)
-
-[Try it online!][TIO-kwhjzfk0]
-
-Longer but more interesting.
-
-See the input as a polynomial, e.g. `[0, 2, 7, 0]` becomes $2x+7x^2$. Let $c\ x^{m-1}$ be its term with the largest coefficient (in this case, $c=7,m=3$). Then we subtract $c\ x^{m-1}$ from the polynomial, and then add $(x^m+x^{m+1}+\cdots+x^{m+c-1}) \bmod (x^n-1)$, where $n$ is the length of the input.
+The spiral turns left at position 1, 2, 3, 5, 7, 10, ..., which is OEIS sequence [A033638]: `a(n) = floor((n^2)/4) + 1`.
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwhjzfk0]: https://tio.run/##HctdCsIwEATgqyyVQlY3tPEHFUmP4UtIYQltKVgbYinx9DH1YQdmPtZzGOXgUw86sWycZjPptXOfOSxCMpFCo6x98OHZudCtQqhKKBmxjK2Troq4j@1UblO7Y6R8ib1/fQWDbKCfgxhBgyK4EfgwvpcMxUYFcIZeMCISGFMTHAmuBLXN9UTbz/mfF4J7Rmsx/QA "Pari/GP – Try It Online"
+[TIO-kwhhvdd2]: https://tio.run/##JY7RCsIwDEV/JfgwWptBOyYoM7774BdMB4Vt2rGVuCmiPz8zzcNNLrk5hP0Y0ivPLdAc04Onk2dVMgWyOFJNHbnCob3o4nULfaMGz9fmoTyy3kdkQ/WajpUKxhB1VXbOjUuSzhhdSJKfv6SApuegBIU5hnZhhKlu2hCbWvZ3YnOsOkw@Gj9otVQxznLdv1WE9AA8hviQcbWYFbQqao1QOoQMYYfgtggbK92KZIts7N/K3/MX "Pari/GP – Try It Online"

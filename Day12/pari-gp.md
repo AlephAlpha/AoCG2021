@@ -1,8 +1,16 @@
-# [Pari/GP], 192 bytes
+# [Pari/GP], 32 bytes
 
-    m->while(a=0*m;a[,1]=m[,1];while(a!=b=matrix(#a,#a~,i,j,m[i,j]&&(a[i,j]+(i>1&&a[i-1,j])+(j>1&&a[i,j-1])+(i<#a&&a[i+1,j])+(j<#a~&&a[i,j+1]))),a=b);m!=n=a+concat([(m-a)[,2..#a~],0*m[,1]]),m=n);m
+    a->t=0;[t=[1-t,t*x][#d]|d<-a];t'
 
-[Try it online!][TIO-kwhvs71c]
+[Try it online!][TIO-kwhmjqm0]
+
+I think this is the simplest challenge so far.
+
+If the length of the direction string is 1, you go from an octagon to a square or vice versa. If the length is 2, you either go from an octagon to another octagon, or from a square to invalid.
+
+Here we use the variable `t` to store the state of the current tile: `0` means octagon, `1` means square. When the direction has length 1, we just change `t` to `1-t`. If the length is 2, we multiply `t` by `x`, so `0` remains `0`, while `1` becomes a polynomial. If `t` is a polynomial, `1-t` and `t*x` are also polynomials. So invalid states are represented by polynomials.
+
+Finally, we take the derivative of `t`. The derivative of a constant is `0`, which is falsy, while the derivative of non-constant polynomials are truthy.
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwhvs71c]: https://tio.run/##VY/BboMwDIZfhYKEnOFUyY5Nw32nPUDEwa3WLahhEaLadumrM0MJbIpi@fv/X5YdqffyPY6XzI5B1l8f/voGZNVTMORQNzZM1Sz6zp5soKH331AQFnRHjy0Gx7UpS6C5qcDXuiwZpGYUFbQLYyv1xP5Y0CxUKcDCfYlUHBECyZ6ECTvbWarOn92ZBnAQJAmHz/s9xxvkJaflGoHBdhweKcbrD1Am6yz2vhsgf@kOuTAPikCphfz1Nvx1LuwJzJzTqFGtXxn1jzXz4y2K2dzkbxPU7Os1n/xtQvLXCXzM@As "Pari/GP – Try It Online"
+[TIO-kwhmjqm0]: https://tio.run/##K0gsytRNL/ifpmD7P1HXrsTWwDq6xDbaULdEp0SrIjZaOSW2JsVGNzHWukT9f2JBQU6lRrGCrp1CQVFmXgmQqQTiKCmkaRRrauooREfHAgmlYCUIFQ6h/ZR0FJRcQYRfOJh0hYqDxYIhZDiSPFx9MIjAbQpcGRYD0QxBNh/ZQKBIbKzmfwA "Pari/GP – Try It Online"

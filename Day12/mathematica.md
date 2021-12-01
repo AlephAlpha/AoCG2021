@@ -1,12 +1,10 @@
-# [Wolfram Language (Mathematica)], 109 bytes
+# [Wolfram Language (Mathematica)], 44 bytes
 
-    #//.x_:>(x-#+RotateLeft/@#&)@ImageData@SelectComponents[Image@x,#BoundingBox[[1,1]]>0&,CornerNeighbors->1<0]&
+    1===Fold[{1-#,x#}[[#2]]&,0,StringLength@#]!&
 
-[Try it online!][TIO-kwhvk914]
+[Try it online!][TIO-kwhmzpfr]
 
-Repeatedly select the components whose bounding box's `x_min` is greater than 0, and move these components 1 unit to the left.
-
-The `SelectComponents` function has a bug: when it takes an array instead of an image as input, the `CornerNeighbors` option does not work. So we have to convert the input into an image.
+A port of my PARI/GP answer. Instead of taking the derivative, we check if the factorial of the state is one.
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwhvk914]: https://tio.run/##fY1vS8MwEIff71OEBopiZpO3Q0vYRBj4D@e7NEicaVcwF8luECj97LUqTBtEOO7gnnvu5wzurDPYbs1Qk8uBFsV5fF6UJ3FOzx49GrQ3tsZC0vxUrp1p7JVBIzf2zW5x5d27Bwu4V19IRkaX/gCvLTRLH5USTGhd8pytfAAb7mzb7F582M9LccF1PjyEFlBla1hUUEHGyJPf4Lhr1K0ZZ7z2wSmqNSNZBfcH/O@s/jzUmuSkkLOu6wQjY/Fp5z2bEdLxv5g4smP94G@WSKmXRPLfnpj@TL0kMvUmkX3fDx8 "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kwhmzpfr]: https://tio.run/##y00syUjNTSzJTE78n6Zg@9/Q1tbWLT8nJbraUFdZp0K5Njpa2Sg2Vk3HQCe4pCgzL90nNS@9JMNBOVZR7X8AUKAkWllB104hLVo5NlZBTUHfgau6ulaHS6FaKVgJSodDGX5KOgpKriDCLxxMusIkwILBEDIcSQFcQzCIwGMOXB02I9GMQbYBxUigUG3tfwA "Wolfram Language (Mathematica) – Try It Online"

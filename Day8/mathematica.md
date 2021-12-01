@@ -1,11 +1,8 @@
-# [Wolfram Language (Mathematica)], 100 bytes
+# [Wolfram Language (Mathematica)], 118 bytes
 
-    (Clear@a;a[a@_=p=i=0]=d=n=1;While[a@p<#,p+=d*=If[4i++<=n^2<4i,n++;I,1];a@p=a[p+I^j]~Sum~{j,4}];a@p)&
+    -Max[Count@4/@Select[Tuples[Range@4,l=Length[s=ToCharacterCode@#~Mod~11]],FreeQ[Tr/@Rest[I^Subsequences[s+#]],0]&]]+l&
 
-[Try it online!][TIO-kwhip1vs]
-
-The spiral turns left at position 1, 2, 3, 5, 7, 10, ..., which is OEIS sequence [A033638]: `a(n) = floor((n^2)/4) + 1`.
+[Try it online!][TIO-kwmz4rzz]
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwhip1vs]: https://tio.run/##JYpBC4IwGIb/ygdCVFu0iUIxvxA6eQs6dBgzRipOdAyxk@hfX6suz8P78A56autBT@alfQPot9e@1mOuhZY6f6JDg0xhhRa5eLSmr0N2WUQdwWqPRSMTQ0iGtoyzxFBLiCgoVyKcUEtHirJT6/09rHNHk@XXdxt/G42dZASHCzQyUgo2cMxh5hRiCmcK/EQhZcEsIP4iZf/JFv8B "Wolfram Language (Mathematica) – Try It Online"
-[A033638]: http://oeis.org/A033638
+[TIO-kwmz4rzz]: https://tio.run/##LYxdC4IwGIX/ylDwRsUEL3UMhCBIKPVuTFj6@gE6a5sSRP71ZdHF4fBwHs7EdQ8T10PNTYsS42f8SdN5EZpEASlghFrTcrmPoGjORQck8sbkDKLTPVVJOac9l7zWINO5AWJv2dxsYciYd5QAV1rKgOSgND1VxXJT8FhA1PuXcu3dOTCHMXd0zEUOQlMb@Ri1dF@QgwKCXlZVYbyucWx5yMIx/tcPq3jF31hv8wE "Wolfram Language (Mathematica) – Try It Online"

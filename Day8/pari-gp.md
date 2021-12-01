@@ -1,10 +1,8 @@
-# [Pari/GP], 140 bytes
+# [Pari/GP], 131 bytes
 
-    n->a=Map([p=i=0,r=d=j=1;1,0]);while(mapget(a,p)<n,p+=d*=I^(i++==j^2\4+1&&j++);mapput(a,p,r=sum(j=1,4,if(mapisdefined(a,q=p+I^j,&z),z,0))));r
+    s->i=#s;forvec(v=[[0,3]|k<-[1..#s]],if(#(l=Vec(Ser([I^a|a<-v-Vec(Vecsmall(s))%11])/(1-x),#s+1))==#Set(l),i=min(i,#[1|a<-v,a-1])));i
 
-[Try it online!][TIO-kwhhvdd2]
-
-A port of my Mathematica answer.
+[Try it online!][TIO-kwmyubrn]
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwhhvdd2]: https://tio.run/##JY7RCsIwDEV/JfgwWptBOyYoM7774BdMB4Vt2rGVuCmiPz8zzcNNLrk5hP0Y0ivPLdAc04Onk2dVMgWyOFJNHbnCob3o4nULfaMGz9fmoTyy3kdkQ/WajpUKxhB1VXbOjUuSzhhdSJKfv6SApuegBIU5hnZhhKlu2hCbWvZ3YnOsOkw@Gj9otVQxznLdv1WE9AA8hviQcbWYFbQqao1QOoQMYYfgtggbK92KZIts7N/K3/MX "Pari/GP – Try It Online"
+[TIO-kwmyubrn]: https://tio.run/##LYzBCsMgEER/RZTCLtW00mPVe8@BXsSAlKRITSoxSAv59zQJPTx2Z2dnkh@DeKalI3rJwgTN8rV7j6V9QNHWnvnFzS8lrKwqlp3joQMGUd9Xv25HsLfGz16JIrbLSu59jJARD1I6PIEUH@QsHyWi1qxuJ4jIg@7DAIEzK/cw92J9RryGxacUv5CJMCSNYZjWlW6Ckm5r5cTSpjGmFKUoJ9Qo8x@7bFQxG9Th8gM "Pari/GP – Try It Online"

@@ -1,8 +1,23 @@
-# [Pari/GP], 90 bytes
+# [Pari/GP], 65 bytes
 
-    s->a=b=0;#[1|d<-Vec(s),if(a,a=0,if(d=="!",!a=1,if(b,d==">"&&b=0,if(d=="<",!b=1,d=="{"))))]
+    a->for(i=1,c=a[m=vecsort(-a,,1)[1]],a[(m+i-1)%#a+1]+=1);a[m]-=c;a
 
-[Try it online!][TIO-kwhl8m5e]
+[Try it online!][TIO-kwhj3ldq]
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwhl8m5e]: https://tio.run/##ZY3LCoMwEEV/JZmCKIyg6yb5jG7EReKjCMUG7UbSfLudaW0VGpJw7zkJ4@005Fe/9kKvc26sdro4n6ry2ar80jXpnOHQpxatLji0WoMElFaXXB0yMJAkbveKvCPPOUBGq16t97clnUVuhJ@G8UERuIDoaUSGooIQAQWEEGLcUsQQfxB5s/sQtROzEWvwcLaPnPDv/kr5Bsd7l5KQNIxcQ4qKNFRpMr1ksHSzUmq8U5ZR0cA6W18 "Pari/GP – Try It Online"
+[TIO-kwhj3ldq]: https://tio.run/##HczdCsIwDAXgVwkToWEpLP6gMrIXKbkIw0lBXalD8Olrt5vA4TsnyXL0j1QmkGJ@mObsojCNYuEl3/v4mfPivBExBlYlC@7VRs@431nL2gpjX6vqZeytWErPnzPwA2yfQIAJrgQpx/dSoVmpAaswOUNEghA6ggPBhaDTGo@0bk7bPRPcKqpi@QM "Pari/GP – Try It Online"
+
+---
+
+# [Pari/GP], 71 bytes
+
+    a->c=a[m=vecsort(-a,,1)[1]];a+Vecrev((1/(1-x)%x^c-c/x)*x^m%(1-x^#a),#a)
+
+[Try it online!][TIO-kwhjzfk0]
+
+Longer but more interesting.
+
+See the input as a polynomial, e.g. `[0, 2, 7, 0]` becomes $2x+7x^2$. Let $c\ x^{m-1}$ be its term with the largest coefficient (in this case, $c=7,m=3$). Then we subtract $c\ x^{m-1}$ from the polynomial, and then add $(x^m+x^{m+1}+\cdots+x^{m+c-1}) \bmod (x^n-1)$, where $n$ is the length of the input.
+
+[Pari/GP]: http://pari.math.u-bordeaux.fr/
+[TIO-kwhjzfk0]: https://tio.run/##HctdCsIwEATgqyyVQlY3tPEHFUmP4UtIYQltKVgbYinx9DH1YQdmPtZzGOXgUw86sWycZjPptXOfOSxCMpFCo6x98OHZudCtQqhKKBmxjK2Troq4j@1UblO7Y6R8ib1/fQWDbKCfgxhBgyK4EfgwvpcMxUYFcIZeMCISGFMTHAmuBLXN9UTbz/mfF4J7Rmsx/QA "Pari/GP – Try It Online"
