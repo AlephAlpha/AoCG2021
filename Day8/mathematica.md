@@ -4,5 +4,7 @@
 
 [Try it online!][TIO-kwmz4rzz]
 
+Very slow. Iterate over all possible commands with the same length and find the one with minimal hamming distance. (I tried using the `HammingDistance` built-in, but that seems to be longer.)
+
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
 [TIO-kwmz4rzz]: https://tio.run/##LYxdC4IwGIX/ylDwRsUEL3UMhCBIKPVuTFj6@gE6a5sSRP71ZdHF4fBwHs7EdQ8T10PNTYsS42f8SdN5EZpEASlghFrTcrmPoGjORQck8sbkDKLTPVVJOac9l7zWINO5AWJv2dxsYciYd5QAV1rKgOSgND1VxXJT8FhA1PuXcu3dOTCHMXd0zEUOQlMb@Ri1dF@QgwKCXlZVYbyucWx5yMIx/tcPq3jF31hv8wE "Wolfram Language (Mathematica) – Try It Online"

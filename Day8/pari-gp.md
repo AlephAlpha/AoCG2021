@@ -4,5 +4,7 @@
 
 [Try it online!][TIO-kwmyubrn]
 
+Very slow. Iterate over all possible commands with the same length and find the one with minimal hamming distance.
+
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
 [TIO-kwmyubrn]: https://tio.run/##LYzBCsMgEER/RZTCLtW00mPVe8@BXsSAlKRITSoxSAv59zQJPTx2Z2dnkh@DeKalI3rJwgTN8rV7j6V9QNHWnvnFzS8lrKwqlp3joQMGUd9Xv25HsLfGz16JIrbLSu59jJARD1I6PIEUH@QsHyWi1qxuJ4jIg@7DAIEzK/cw92J9RryGxacUv5CJMCSNYZjWlW6Ckm5r5cTSpjGmFKUoJ9Qo8x@7bFQxG9Th8gM "Pari/GP – Try It Online"
