@@ -9,8 +9,8 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 | [Day1] |   [89](Day1/pari-gp.md) | [98](Day1/mathematica.md)[^1] |
 | [Day2] |   [71](Day2/pari-gp.md) |     [68](Day2/mathematica.md) |
 | Day3   |   [89](Day3/pari-gp.md) |     [83](Day3/mathematica.md) |
-| Day4   |   [59](Day4/pari-gp.md) |     [54](Day4/mathematica.md) |
-| Day5   |  [154](Day5/pari-gp.md) |     [91](Day5/mathematica.md) |
+| Day4   |   [34](Day4/pari-gp.md) |     [32](Day4/mathematica.md) |
+| Day5   |  [150](Day5/pari-gp.md) |     [91](Day5/mathematica.md) |
 | Day6   |   [53](Day6/pari-gp.md) |     [55](Day6/mathematica.md) |
 | Day7   |   [69](Day7/pari-gp.md) |     [76](Day7/mathematica.md) |
 | Day8   |  [125](Day8/pari-gp.md) |    [118](Day8/mathematica.md) |
