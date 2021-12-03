@@ -1,8 +1,10 @@
-# [Pari/GP], 125 bytes
+# [Pari/GP], 120 bytes
 
-    s->i=#s;forvec(v=[[0,3]|k<-[1..#s]],if(prod(j=1,#s,prod(k=j,#s+a=0,a+=I^(Vecsmall(s)[k]%11+v[k]))),i=min(i,#[1|a<-v,a-1])));i
+    s->i=#s;forvec(v=[[0,3]|k<-[1..#s]],prod(j=1,#s,prod(k=j,#s+a=0,a+=I^(Vecsmall(s)[k]%11+v[k])))&&i=min(i,#[1|a<-v,a]));i
 
-[Try it online!][TIO-kwoe1pnc]
+[Try it online!][TIO-kwq48zfd]
+
+Very slow. Iterate over all possible commands with the same length and find the one with minimal hamming distance.
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwoe1pnc]: https://tio.run/##LYxNCsMgGESvIoaCks8Q6TLqvhfoRhQkTYr5lViEQu5uk9DFMO8xMMFtnr1D7pHMkSkvi9j065a6liSpdQ13s4@CaV5VRTQGfE/Ctr7IIDkUES4e5XBw6WQNrpQPS55dG2c3TSRSPZob52U6mlIKXs5@IR4KzXcnWALH@Dk0PrsQpi@JiCkUNr98DsSnYNQfPxSQxtYqlZIQGBBWQv3rUiuSOoMNzT8 "Pari/GP – Try It Online"
+[TIO-kwq48zfd]: https://tio.run/##LYxLCsMgAESvIkqDEg2RLqPue4FuxICkSTFfiUUo5O7WtF0M894sxtvdsadPA5ApMOUkCs2w7bHvcJRa1/RqjkkwzasKBWOo37cHHiWnKPx4kmPm0sqa2lLeWnzvu7DYecaB6MlcOC9jbkJIUTi5uBU7ijQ/rGCR2rw3Llnv5zcOgCngd7e@MsJTIBjyC6FAw7ZVKkYhIAVQCfWvr7YiqjPQkPQB "Pari/GP – Try It Online"

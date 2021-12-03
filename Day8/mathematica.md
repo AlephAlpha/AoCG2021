@@ -1,10 +1,8 @@
-# [Wolfram Language (Mathematica)], 118 bytes
+# [Wolfram Language (Mathematica)], 107 bytes
 
-    -Max[Count@4/@Select[Tuples[Range@4,l=Length[s=ToCharacterCode@#~Mod~11]],FreeQ[Tr/@Rest[I^Subsequences[s+#]],0]&]]+l&
+    -Max[Count@4/@Select[Tuples[Range@4,l=Length[s=ToCharacterCode@#~Mod~11]],0!=##&@@Accumulate[I^(s+#)]&]]+l&
 
-[Try it online!][TIO-kwmz4rzz]
-
-Very slow. Iterate over all possible commands with the same length and find the one with minimal hamming distance. (I tried using the `HammingDistance` built-in, but that seems to be longer.)
+[Try it online!][TIO-kwq4qgud]
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwmz4rzz]: https://tio.run/##LYxdC4IwGIX/ylDwRsUEL3UMhCBIKPVuTFj6@gE6a5sSRP71ZdHF4fBwHs7EdQ8T10PNTYsS42f8SdN5EZpEASlghFrTcrmPoGjORQck8sbkDKLTPVVJOac9l7zWINO5AWJv2dxsYciYd5QAV1rKgOSgND1VxXJT8FhA1PuXcu3dOTCHMXd0zEUOQlMb@Ri1dF@QgwKCXlZVYbyucWx5yMIx/tcPq3jF31hv8wE "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kwq4qgud]: https://tio.run/##LcfdCoIwGIDhW1kORqFigoduLDwKEqI8GxPG/PyBOUOnBJG3bhQdvDy8vXIt9Mp1Wm01oluYq6fIhtk6nkT8Dga0E8X8MDCJm7IN8CQw9AK2ca2YaDFkrRqVdjBmQwUcr/lQrXEsZXDcUYwJ5yet5342yoE4l/vJxwdJpPQN2a5jZ53AKGSoFlhKRFDE0csrS8aWJU29AHksZX9@W6YL@@a9tw8 "Wolfram Language (Mathematica) – Try It Online"
