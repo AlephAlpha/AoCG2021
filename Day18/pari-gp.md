@@ -1,8 +1,8 @@
-# [Pari/GP], 98 bytes
+# [Pari/GP], 94 bytes
 
-    s->vecmax([vecmin([#[1|k<-[j..p=#s+a=0],p*=a+=I^(Vecsmall(s)[k]%69)]+j-i|j<-[i..#s]])|i<-[1..#s]])
+    s->vecmax([vecmin([#[1|k<-[j..p=#s+a=0],p*=a+=I^(Vecsmall(s)[k]%69)]+j-i|j<-r])|i<-r=[1..#s]])
 
-[Try it online!][TIO-kwod74cc]
+[Try it online!][TIO-kwrdme0a]
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwod74cc]: https://tio.run/##Xc09C4MwEAbgvxIihaSaUJdCoXGJCJ3cuoQUgmiJXxymlBb87/YUp07vPS/cHbjJiycsDVFLENm7rgb3YWZNPzITmXTursK0UoKKQuzUySZwVC5Wtwe711UYXN@zwE1nD@cLt3Er/NzihpcyCtby2SPSHYsD6L8sEJERmPz4wpGuoKTBIzwhhmqaEFrm@RalLoui@IPWei/Qm9ZaIym@@AE "Pari/GP – Try It Online"
+[TIO-kwrdme0a]: https://tio.run/##XY09C4MwFEX/SogUkmpCXQoF4xIROrl1eaQQREv84mFKacH/bqN06nTuucO9aGcnHri2RK1e5K@mHu2bwUY3MYggXfpMQCclqsjHVp1MgkdlY3W9s1tT@9EOA/McenM4X7iJO@GWLhOz4YsLUJBKGXlj@GoRhw/zROQEZzc9Q6SbUNKGAZ4QoJomhFZFsaPSVVmWf6K1/hXBd9tqHZSGiy8 "Pari/GP – Try It Online"
