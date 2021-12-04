@@ -4,5 +4,7 @@
 
 [Try it online!][TIO-kwqgqrgx]
 
+Extremely slow. Iterates over all the commands with the given length, filters out the correct ones, and find the minimal Hamming distance.
+
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
 [TIO-kwqgqrgx]: https://tio.run/##LY3BCsMgGINfRSwDf6pssmPV@86FXcSClHbIbCe1yAa@u7Njh5B8IZBgN8ceocxIlsiUk03s5teWppEkqfWFXk1@CublvTZVcbHekwhw4tzQpp/2oyX9tBF9G8Y81m2bDJwJZ2@gi2x8ywHYkrOTi1uJo43m2QqWqDUAnSs2BP8hETGFwubWvUZ8AEbzcUSRxsOgVEpCYIqwEupvPxxEUoewgfIF "Pari/GP – Try It Online"

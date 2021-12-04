@@ -1,8 +1,8 @@
-# [Pari/GP], 114 bytes
+# [Pari/GP], 110 bytes
 
-    n->p=Pol(c=0);a=Map();for(i=1,n,if(q=mapisdefined(a,p),mapdelete(a,p),mapput(a,p,1));p+=x^(c+=(-1)^q)%(x^2-x+1));c
+    n->p=Pol(c=0);a=Map();for(i=1,n,if(mapisdefined(a,p),mapdelete(a,p);c--,mapput(a,p,1);c++);p+=x^c%(x^2-x+1));c
 
-[Try it online!][TIO-kwm2v98h]
+[Try it online!][TIO-kwrpmb5u]
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwm2v98h]: https://tio.run/##PYxLCgMhEESv4ibQjQrjbKVzg0BOIIifIEycnokBb2/GTRYF9epBsT@LfvHIgkbVd6bnvkGgBa2nh2dAm/cTChlVVclw0Ntz@cSUS00RvGJU1xLTllr6I3/b7MogWpbUHQRJoA26A2/Q3aq7nC6MeV4FiUWJ9QqfpTbIUBFx/AA "Pari/GP – Try It Online"
+[TIO-kwrpmb5u]: https://tio.run/##HcxLCgMhEEXRrTgJVKFC21Op7CCQFTSInyB07MIYcPdGM3iDewaPXc36xSMJGkXfmZ7XCZ42tI4ejgFtuipkMqqonODtOH9CTLnEAE4xqikhnrHFf1qv9SL@ttXKTJESLUvqh79BP3bdpcHJYx0XQWJTYp/jmkuDBAURxw8 "Pari/GP – Try It Online"

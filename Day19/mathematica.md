@@ -1,8 +1,8 @@
-# [Wolfram Language (Mathematica)], 167 bytes
+# [Wolfram Language (Mathematica)], 156 bytes
 
-    Min[Max[Last/@Tally[Join@@MapThread[Range,{#-r,#-1}]]]&/@Pick[r=Range[n=Max@#];{a,b}=#;s=Select[Range@Tr@r~Tuples~n,#r&&#[[b]]-b#[[a]]&],Max/@s,Min[Max/@s]]]&
+    Min[Max@Total@IntegerDigits[2^#-2^(#-r),2,l+1]&/@Pick[{a,b}=#;s=Select[Range@Tr[r=Range[n=Max@#]]~Tuples~n,#r&&#[[b]]-b#[[a]]&],m=Max/@s,l=Min@m]]&
 
-[Try it online!][TIO-kwrlqdps]
+[Try it online!][TIO-kwrqi487]
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwrlqdps]: https://tio.run/##LY5BasMwEEWvIhB4NcbYWQYVrUsNIfFumMXYVRpRRw2yAilC2XaZXKbnyhFcue3qv@Ezb@bI4WCOHOzA816oubUOW77gC0@h0h2P4yc@f1indcun7uANv@KW3ZuBKEsPsqwTERWV3tjhHb367dCp7NCS1pGhT0o@bl/rSe3MaIbwt647r/21O59GM10dyMf92xeFROyJyj5PGTmLCbKp0hP8P5ZxuTdvvHUBpSifxB4lkShEpUWMsYE6gYgraNKSsQbRLJBzlVKafwA "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kwrqi487]: https://tio.run/##HY6xasMwGIRfRSAQDf2NsTIWFQ1dMgRC4u1HAdkojqisFFmBgFDWjO3L9LnyCK7c6b47juNGHc9m1NH2ej4RMW@tx62@yfYStZMbH81gwocdbJyQH2nFjy@0Civg4F4bxWq5s/0nJg1dFvT5/XibxME400fcaz8Y2QYM4h/Ri2WYKnVvr1/OTHcP9PnzGxijiJ1SVVdcQa0UUzAu7VpO4ET5JMcSzrtgfURKqndywjJEGKklSSlxaDKQtAaeF00NEL5A0XXOef4D "Wolfram Language (Mathematica) – Try It Online"

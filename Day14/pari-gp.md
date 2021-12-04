@@ -1,8 +1,8 @@
-# [Pari/GP], 67 bytes
+# [Pari/GP], 64 bytes
 
-    (n,m)->c=0;forpart(x=n,forpart(y=n,lcm(Vec(concat(x,y)))-m||c=1));c
+    (n,m)->forpart(x=c=n,forpart(y=n,c*=lcm(Vec(concat(x,y)))-m));!c
 
-[Try it online!][TIO-kwiqvsx3]
+[Try it online!][TIO-kwrn9sd3]
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwiqvsx3]: https://tio.run/##NYzNCoQgFIVf5dLKCwpp5QRhjzGbaCEyDYGVSIsJendHSVfnu/f8OO1X9nVhARXITjdko1H1sBzeaX@Sn9pp4SuyNRt5fwwxx250tOmFiGy7b6M44mCCds5eRAMbwfl1PyNW6ajAaGvJQkEjUpgmToHPEQQFkbShILM2SfvodwVEnYjLmO0Lda18vnlA5GIcaJPGSNNleJJpSZY6f80zhj8 "Pari/GP – Try It Online"
+[TIO-kwrn9sd3]: https://tio.run/##NYzBCsMgEER/ZZuTWxSqSWygmM/oJeQg0pSAMSI5NF9vlehp3uzOjNdhZV8fF1CROLohG5c9eB0O8lNGOVrdmdjclTUbeX8MMbszOmXoiYhsQ3zdTNTe25NoYCP4sLojYZNNA0ZbSxYKGpHCNHEKfE4gKIisLQVZtM06pH9fQTwycZmyQ6W@k9e1DIhSTANd1hRp@wJXMi/JWufPecb4Bw "Pari/GP – Try It Online"

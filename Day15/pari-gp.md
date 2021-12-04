@@ -1,8 +1,8 @@
-# [Pari/GP], 105 bytes
+# [Pari/GP], 100 bytes
 
-    s->a=Map(Mat([p=c=0,1]));for(d=1,#s,while(c++;mapisdefined(a,p+=I^(Vecsmall(s)[d]%11)),);mapput(a,p,1));c
+    s->a=Map(Mat([p=c=0,1]));[mapput(a,while(c++;mapisdefined(a,p+=I^d),)+p,1)|d<-Vec(Vecsmall(s))%11];c
 
-[Try it online!][TIO-kwoes1it]
+[Try it online!][TIO-kwrnyywl]
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwoes1it]: https://tio.run/##LYvNCsMgEIRfRSwFlxio50TvPeTaS0hA/GkFk0pMLX16q01nWZhvmAlyc@09ZIt4jq2QfJCBDHInY@CKXyibADr73IjmjJ4ifT@cN0Q1TbfI4KI21q1GE0lDw68zuRkVF@k9iTDq6cwYAIVaDa@9lmgJOpUL@w@JqBUobG7di8UVMLJlCRSNOM3HYYrwLFJfvlrxU3/oH6SUKkyQvw "Pari/GP – Try It Online"
+[TIO-kwrnyywl]: https://tio.run/##LUzLCsMgEPwVEQqKCvWc6L2HXHsJCYiaVjBliaml0H@32nSGgXksC2YL4gZlQaokoY0aDJDB7GQEZdWZy4nSblwNwHMnhr/uIXpiGetqFZLzS3h4Vwdg6jI7yikDLunH9eLqLalKq4mRJEpPUk6dLfVTfJOEhEawhcdeLW4Bo6VdcTTiPB/EHOFZ576qWf1Df@Bf5JxbmGj5Ag "Pari/GP – Try It Online"
