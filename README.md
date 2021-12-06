@@ -26,6 +26,7 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 | Day18  |     [94](Day18/pari-gp.md) |    [89](Day18/mathematica.md) |
 | Day19  |    [187](Day19/pari-gp.md) |   [156](Day19/mathematica.md) |
 | Day20  |    [100](Day20/pari-gp.md) |   [121](Day20/mathematica.md) |
+| Day21  |     [45](Day21/pari-gp.md) |    [61](Day21/mathematica.md) |
 
 [^1]: Not posted because there are better answers.
 [^2]: Golfed by [att] after posted.
