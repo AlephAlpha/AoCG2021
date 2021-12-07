@@ -11,8 +11,8 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 | [Day3] |      [89](Day3/pari-gp.md) | [83](Day3/mathematica.md)[^1] |
 | [Day4] |  [32](Day4/pari-gp.md)[^3] | [32](Day4/mathematica.md)[^1] |
 | [Day5] | [144](Day5/pari-gp.md)[^4] |     [89](Day5/mathematica.md) |
-| [Day6] |      [53](Day6/pari-gp.md) |     [55](Day6/mathematica.md) |
-| Day7   |      [69](Day7/pari-gp.md) |     [76](Day7/mathematica.md) |
+| [Day6] |  [52](Day6/pari-gp.md)[^5] | [49](Day6/mathematica.md)[^5] |
+| [Day7] |      [69](Day7/pari-gp.md) |     [76](Day7/mathematica.md) |
 | Day8   |     [118](Day8/pari-gp.md) |    [107](Day8/mathematica.md) |
 | Day9   |     [138](Day9/pari-gp.md) |    [100](Day9/mathematica.md) |
 | Day10  |     [65](Day10/pari-gp.md) |    [78](Day10/mathematica.md) |
@@ -32,6 +32,7 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 [^2]: Golfed by [att] after posted.
 [^3]: Fixed one typo by [xnor].
 [^4]: Found one bug by [tsh].
+[^5]: Porting [tsh]'s answer.
 
 [Advent of Code Golf 2021]: https://codegolf.meta.stackexchange.com/questions/24068/announcing-advent-of-code-golf-2021-event-challenge-sandbox
 [att]: https://codegolf.stackexchange.com/users/81203/att
@@ -43,3 +44,4 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 [Day4]: https://codegolf.stackexchange.com/a/238053/9288
 [Day5]: https://codegolf.stackexchange.com/q/238073/9288
 [Day6]: https://codegolf.stackexchange.com/q/238111/9288
+[Day7]: https://codegolf.stackexchange.com/q/238158/9288

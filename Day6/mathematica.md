@@ -1,12 +1,11 @@
-# [Wolfram Language (Mathematica)], 55 bytes
+# [Wolfram Language (Mathematica)], 49 bytes
 
-    Min[Tr/@Abs@Fold[s=ReIm@{1-I,1,I};#.Most@s+#2s&,0s,#]]&
+    Max@Abs@{s=Fold[{#2-#[[2]],Tr@#}&,{0,0},#],Tr@s}&
 
-[Try it online!][TIO-kwhe7kjn]
+[Try it online!][TIO-kwvfwx2h]
 
-If we use a coordinate system with basis \$(0,1)\$ and \$(\frac{1}{2},\frac{\sqrt{3}}{2})\$ (in the Cartesian coordinate system), then 60° rotation is just multiplying by the matrix \$\begin{pmatrix}1 & -1\\1 & 0\end{pmatrix}\$.
-
-In each step, instead of turning the taxi and going forward in the new direction, we rotate the whole city and moving in a fixed direction. We choose three fixed directions, represented by \$(1,-1), (1,0), (0,1)\$ in the new coordinate system. One of the threes destination falls into the first or the third quadrant (or should I call it sextant?). Then we can take the taxicab distance as usual.
+A port of [@tsh's answer]. Make sure to upvote that answer as well!
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwhe7kjn]: https://tio.run/##y00syUjNTSzJTE78n6Zg@983My86pEjfwTGp2MEtPyclutg2KNUz16HaUNdTx1DHs9ZaWc83v7jEoVhb2ahYTcegWEc5Nlbtf0BRZl5JdLVyrYKunUJaNFBMQU1B30GhurpWR6HaUEcBhBBMAx0FIyjPCMyDICOEIiDTWEfBpLb2PwA "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kwvfwx2h]: https://tio.run/##RYo9C8IwEED/ysFBpivG07USFzehg1vIED@KBVuhyVA47rfHWoXCG96D18f8fPQxd7dYWqjLOU7ueE1OUn16v@5ekCv0nkOgy@hQDYklq4RLJzWlGbshz59CdYDWYwhgYONARAlkS/BlVUvA/@KlfvA6zboj2KuWDw "Wolfram Language (Mathematica) – Try It Online"
+[@tsh's answer]: https://codegolf.stackexchange.com/a/238117/9288
