@@ -4,5 +4,7 @@
 
 [Try it online!][TIO-kwq4qgud]
 
+There is a built-in for Hamming distance, but its name is `HammingDistance`, much longer than calculating it manually.
+
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
 [TIO-kwq4qgud]: https://tio.run/##LcfdCoIwGIDhW1kORqFigoduLDwKEqI8GxPG/PyBOUOnBJG3bhQdvDy8vXIt9Mp1Wm01oluYq6fIhtk6nkT8Dga0E8X8MDCJm7IN8CQw9AK2ca2YaDFkrRqVdjBmQwUcr/lQrXEsZXDcUYwJ5yet5342yoE4l/vJxwdJpPQN2a5jZ53AKGSoFlhKRFDE0csrS8aWJU29AHksZX9@W6YL@@a9tw8 "Wolfram Language (Mathematica) – Try It Online"

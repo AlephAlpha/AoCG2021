@@ -1,11 +1,11 @@
-# [Pari/GP], 138 bytes
+# [Pari/GP], 87 bytes
 
-    n->a=Map([p=i=0,r=d=j=1;1,0]);while(mapget(a,p)<n,mapput(a,p+=d*=I^(i++==j^2\4+1&&j++),r=sum(j=1,4,if(mapisdefined(a,q=p+I^j,&z),z,0))));r
+    n->a=Mat(1);until(d=[b|b<-c,b>=n],s=0;a=Mat(Vecrev(concat(c=[s+=b|b<-a[,1]],a~))));d[1]
 
-[Try it online!][TIO-kwq5dpmt]
+[Try it online!][TIO-kwyjj0qp]
 
-The spiral turns left at position 1, 2, 3, 5, 7, 10, ..., which is OEIS sequence [A033638]: `a(n) = floor((n^2)/4) + 1`.
+A port of [@Neil's answer].
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwq5dpmt]: https://tio.run/##JY7BDoIwDIZfpfFANleSjWCiwXr34BOgJEsAHYGlgsboy2PRHv72O/TLz34M6ZXnFmiO6cHTybMqmQJZHKmmjlzh0F508bqFvlGD52vzUB5Z7yMK8fNHhuo1HSsVjCHqquycG5cknTFaNNNzUCLCHEO7GMJUN22ITS2fd2JzrDpMPho/aLVMMc7i7d8qQnoAHkN8yLlaYAWtilojlA4hQ9ghuC3Cxsq2EtkSG/tHaT1/AQ "Pari/GP – Try It Online"
-[A033638]: http://oeis.org/A033638
+[TIO-kwyjj0qp]: https://tio.run/##JYrBCoMwEER/ZfGU0A0kgtBi1z/otZeQQ4xaBFmD2kKh9NfTWOfwZh5M9MuoHjENQIlV4@nmN2Fk/eRtnERHtv20VxWwbYgdrqTr43Lvw9K/RJg5ZAtk1xP9r96icQ79V@bUnTUu@Rint2BQDcRl5C3PYpcCBsFSIliDUCJcEMwZodK5dUa5o9KHaifTDw "Pari/GP – Try It Online"
+[@Neil's answer]: https://codegolf.stackexchange.com/a/238259/9288
