@@ -1,11 +1,11 @@
-# [Wolfram Language (Mathematica)], 93 bytes
+# [Wolfram Language (Mathematica)], 76 bytes
 
-    Cases[{{1}}//.a:{{__},___}/;Max@a<#:>Reverse@Append[a,Accumulate@Last@a],b_/;b>=#,2][[1]]&
+    Min@Cases[Nest[Reverse@Append[#,Accumulate@Last@#]&,{{1}},#],b_/;b>=#,2]&
 
-[Try it online!][TIO-kwyaozx2]
+[Try it online!][TIO-kwzq4q7q]
 
 A port of [@Neil's answer].
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwyaozx2]: https://tio.run/##JcfRCoIwFIDhVzkgdHVqmyCUpky6LYhux5CjTRJSRGcEY9dd9qg9ghndfD9/S/ZmWrJNRXMN6Xyg0YzKOeE9YxuKnSsKj8UCS070lLQP4uxiHmYYjcz73nRXRZhX1dROd7JGHmm0kvTn/cKyYEmZpQGGWimh9Wo@D01nVQDrDGoVaA0rYBKcQAgRdghiixDxpXwh/BHx/3I/fwE "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kwzq4q7q]: https://tio.run/##JcdBC4IwGIDhv/LBYKcvnIJQhDLpWhFdx4hpnyg0ETe7yM4d@6n9hGV0eV5ea3xH1vi@MbGFIp76QR6MI6fO5Ly60pMmR7IaRxruimHVNLOdH8aTPBrnJdOf94vjsqQhINNY35J9XRYMM83jZeoHrxhsSmgV0xo4JBKWFCFD2CGkW4RcrBUr2Y9c/FeE@AU "Wolfram Language (Mathematica) – Try It Online"
 [@Neil's answer]: https://codegolf.stackexchange.com/a/238259/9288

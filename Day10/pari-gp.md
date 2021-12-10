@@ -17,7 +17,7 @@
 
 Longer but more interesting.
 
-See the input as a polynomial, e.g. `[0, 2, 7, 0]` becomes $2x+7x^2$. Let $c\ x^{m-1}$ be its term with the largest coefficient (in this case, $c=7,m=3$). Then we subtract $c\ x^{m-1}$ from the polynomial, and then add $(x^m+x^{m+1}+\cdots+x^{m+c-1}) \bmod (x^n-1)$, where $n$ is the length of the input.
+See the input as a polynomial, e.g. `[0, 2, 7, 0]` becomes \$2x+7x^2\$. Let \$c\ x^{m-1}\$ be its term with the largest coefficient (in this case, \$c=7,m=3\$). Then we subtract \$c\ x^{m-1}\$ from the polynomial, and then add \$(x^m+x^{m+1}+\cdots+x^{m+c-1}) \bmod (x^n-1)\$, where \$n\$ is the length of the input.
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
 [TIO-kwhjzfk0]: https://tio.run/##HctdCsIwEATgqyyVQlY3tPEHFUmP4UtIYQltKVgbYinx9DH1YQdmPtZzGOXgUw86sWycZjPptXOfOSxCMpFCo6x98OHZudCtQqhKKBmxjK2Troq4j@1UblO7Y6R8ib1/fQWDbKCfgxhBgyK4EfgwvpcMxUYFcIZeMCISGFMTHAmuBLXN9UTbz/mfF4J7Rmsx/QA "Pari/GP – Try It Online"

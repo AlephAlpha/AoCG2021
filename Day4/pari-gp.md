@@ -4,7 +4,7 @@
 
 [Try it online!][TIO-kwrf99ce]
 
-House \$i\$ gets a present from elf \$j\$ \$\iff\$ \$i=\frac{k(j+k-1)}{2}\$ for some \$k \ge 0\$ \$\iff\$ \$k=\frac{\sqrt{(2j-1)^2+8i}-2j+1}{2}\$ for some \$k\$ \$\iff\$ \$(2j-1)^2+8i=l^2\$ for some \$l\$ \$\iff\$ \$8i=(l+2j-1)(l-2j+1)\$ for some \$l\$ \$\iff\$ \$m-8i/m=4j-2\$ for some divisor \$m\$ of \$i\$.
+House \$i\$ gets a present from elf \$j\$ \$\iff\$ \$i=\frac{k(j+k-1)}{2}\$ for some \$k \ge 0\$ \$\iff\$ \$k=\frac{\sqrt{(2j-1)^2+8i}-2j+1}{2}\$ for some \$k\$ \$\iff\$ \$(2j-1)^2+8i=l^2\$ for some \$l\$ \$\iff\$ \$8i=(l+2j-1)(l-2j+1)\$ for some \$l\$ \$\iff\$ \$m-8i/m=4j-2\$ for some divisor \$m\$ of \$8i\$.
 
 So house \$i\$ gets \$n\$ presents \$\iff\$ \$8i\$ has \$n\$ divisors \$d\$ such that \$d\equiv 2 \pmod{4}\$ \$\iff\$ \$i\$ has \$n\$ odd divisors.
 
