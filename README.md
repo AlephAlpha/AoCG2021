@@ -16,7 +16,7 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 | [Day8]  |     [118](Day8/pari-gp.md) |    [107](Day8/mathematica.md) |
 | [Day9]  |  [87](Day9/pari-gp.md)[^6] | [76](Day9/mathematica.md)[^6] |
 | [Day10] |     [65](Day10/pari-gp.md) |    [78](Day10/mathematica.md) |
-| Day11   |     [90](Day11/pari-gp.md) |    [68](Day11/mathematica.md) |
+| [Day11] |     [90](Day11/pari-gp.md) |    [68](Day11/mathematica.md) |
 | Day12   |     [32](Day12/pari-gp.md) |    [41](Day12/mathematica.md) |
 | Day13   |    [184](Day13/pari-gp.md) |   [109](Day13/mathematica.md) |
 | Day14   |     [64](Day14/pari-gp.md) |    [51](Day14/mathematica.md) |
@@ -27,6 +27,7 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 | Day19   |    [187](Day19/pari-gp.md) |   [156](Day19/mathematica.md) |
 | Day20   |    [100](Day20/pari-gp.md) |   [121](Day20/mathematica.md) |
 | Day21   |     [45](Day21/pari-gp.md) |    [61](Day21/mathematica.md) |
+| Day22   |    [179](Day22/pari-gp.md) |   [143](Day22/mathematica.md) |
 
 [^1]: Not posted because there are better answers.
 [^2]: Golfed by [att] after posted.
@@ -50,3 +51,4 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 [Day8]: https://codegolf.stackexchange.com/q/238209/9288
 [Day9]: https://codegolf.stackexchange.com/q/238258/9288
 [Day10]: https://codegolf.stackexchange.com/q/238301/9288
+[Day11]: https://codegolf.stackexchange.com/q/238353/9288
