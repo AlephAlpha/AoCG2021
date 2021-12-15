@@ -1,8 +1,8 @@
-# [Wolfram Language (Mathematica)], 82 bytes
+# [Wolfram Language (Mathematica)], 79 bytes
 
-    (Clear@a;a[d=p=0]=1;(While[a[p+=#]>0d++];a@p=1)&/@(I^ToCharacterCode@#~Mod~11);d)&
+    (a[d=p=0]=0Clear@a;(a@p=0While[a[p+=#]<++d])&/@(I^ToCharacterCode@#~Mod~11);d)&
 
-[Try it online!][TIO-kwrpgw0t]
+[Try it online!][TIO-kx7b91si]
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwrpgw0t]: https://tio.run/##LYhBCoMwFESv8jEgii2adUwIuOqi0EWhixDhYyIKWiWEbEq9elpr3zDwZmb0g53Rjx3GHnjMmsmik8hQGb7ySnPKsscwTlahWgtOtKhMUWiGcuU0T0uZXdr70gzosPPWNYuxkmzXxWyU5szkaby58ekVgbOAXhGtIYVSwisJ7ZHkBEkrQv3truJHffA/Qgj7eMcP "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kx7b91si]: https://tio.run/##LYhBCoMwFESv8jEgES3qWiMBV10Uuih0ESJ8TCSCVgkhm1KvnmrtGwZm3ozO6Bnd2GMYgAWKQrGVFZIV7aTRcqwo8l08zThpgWJNGZF1miqZxDmn1@6xtAYt9k7bdlGak@22qK0sk0olcbjb8eUEgUsDgyBSQgw5h3fkuzNRBlHX@HrvMZsf9clfeO@P8wlf "Wolfram Language (Mathematica) – Try It Online"
