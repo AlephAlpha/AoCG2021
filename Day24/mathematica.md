@@ -1,8 +1,8 @@
-# [Wolfram Language (Mathematica)], 75 bytes
+# [Wolfram Language (Mathematica)], 48 bytes
 
-    #=={}||NumberQ@*ChineseRemainder@@#&@Thread[i=0;If[#>0,{--i,#},Set@s]&/@#]&
+    AtomQ@ChineseRemainder[-Range@Tr[1^#],#/. 0->1]&
 
-[Try it online!][TIO-kx5vl87p]
+[Try it online!][TIO-kxhgm3f1]
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kx5vl87p]: https://tio.run/##RY09C4MwEIZ3f8VBwKFENH5QpEQCnbqUfm3iYGvEDDpEO8X8dntNCoWDO5734b2xXQY5tot6tVsPfCOcG7uu5/f4lPoqdsdBTXKWN3TU1EktBAnFY9Cy7WrFk8Opr0mVUBNFihJL73IRcxPGgjThdtFqWmoCUQVoNQ2EEIsAjNlTYBmFxE1RupUxhKWlAYDBM0VCIcfYo8SvsvwrmBcUsAsLGPOV7Kcj3fvrC10Rczq6qQ9y9za3dvsA "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kxhgm3f1]: https://tio.run/##RY3NCsIwEITvPsVCoKfUdvtDycFS8QW0eAsRgqY2h0aovZU@e1wTQViY4ZthdtLLaCa92Lv2Axz8cXlNl@40WmfepqfEuoeZZdpr9zTddZZ4Y4qzbA952qJK/Hm2bpEM0hYGyZSCBLJuB@vacMCSQx6uFkFKJCg2vgNYyRZEOFQUR5RHEeJfobzmQFs0gBgn8Vcn2kT3hWEIQ526RQyq8LbaNv8B "Wolfram Language (Mathematica) – Try It Online"

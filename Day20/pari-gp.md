@@ -1,9 +1,10 @@
-# [Pari/GP], 100 bytes
+# [Pari/GP], 81 bytes
 
-    f(a)=#a&&0<(l=#a-a[#a]-1)&&g(a[2..l],a[1])
-    g(a,b)=if(b,sum(i=1,#a,f(a[1..i])*g(a[i+1..#a],b-1)),!#a)
+    f(a)=#a&&if(a[1],sum(i=2,#a,f(a[2..i])*f(concat(a[1]-1,a[i+1..#a]))),a[#a]+2==#a)
 
-[Try it online!][TIO-kwrx7cvh]
+[Try it online!][TIO-kxgwjobf]
+
+A port of [@G B's answer](https://codegolf.stackexchange.com/a/239887/9288).
 
 [Pari/GP]: http://pari.math.u-bordeaux.fr/
-[TIO-kwrx7cvh]: https://tio.run/##XY7PCsIwDMbvPkV1MBrNxtKdBOeLlB6yg1KYUqYefPqadhtToW2@L39@aeDRV9cQ40UzdAWXZXPSg4iKbcGuIijLq2Zr6npwyJYcbMRjD52/6B4fr5v2HWHBKARLde0d7NOEP4gRBPYCAdwWDJFDGN6aVXVWYfT3p8hdMjuV1gMqaxtUjRNBEqeTnMTjcb1typlcpnSlmcS2EnIy9Ygy@aVF56lMm5E0L6J14UQxKdFO/OUf3@Kry/xW/rVzED8 "Pari/GP – Try It Online"
+[TIO-kxgwjobf]: https://tio.run/##XU3RCoMwDPyVoiB21mLqkw/uR0ofguAobK647WFf3yWtMjdomrvkchdw9e0lxDjXKMcSq8oTsuDU43Wr/WhUiYonRmvv5Gmup/sy4TNpWlBofQNal@iklMQINGYkIxkxhOu7RtGeRVj9QieiYFIIzpJKWNsp0TkCQD0/ZtSH4Vs9z0xaAxeJgWhPLQ1ZQ8ikH3acrpLbZglbEGz8EJh9sqfhQZ/TdtERHFTmd/OPnZPxAw "Pari/GP – Try It Online"

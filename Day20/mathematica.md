@@ -1,11 +1,12 @@
-# [Wolfram Language (Mathematica)], 121 bytes
+# [Wolfram Language (Mathematica)], 65 bytes
 
-    f@_=1<0
-    f@{y_,x___,z___,l_}/;Tr[1^{z}]==l:={x}~g~y
-    x_~g~0=x=={}
-    x_~g~y_:=Array[f@x[[;;#]]&&g[x~Drop~#,y-1]&,Tr[1^x],1,Or]
+    f@___=1<0
+    f[0,x___,l_]:=l==Tr[1^{x}]
+    f[a_,x__/;f@x,y__]:=f[a-1,y]
 
-[Try it online!][TIO-kwrwdrqu]
+[Try it online!][TIO-kxgwc3hu]
+
+A port of [@G B's answer](https://codegolf.stackexchange.com/a/239887/9288).
 
 [Wolfram Language (Mathematica)]: https://www.wolfram.com/wolframscript/
-[TIO-kwrwdrqu]: https://tio.run/##XU5NC4MwDL37KwqCpw6NnqbrcLD7dtitdEXGdIL7oHhoV@pfd7VF5gZN8l7y8tJ71d@u96pvL9U41iUnsEmCutSKY8k5x@8pddzExUlQOOu3YYR0OdHSDM2gAsltSYgkRBtPFM/JTohK0bqUlBZFyFgUNVQOe/F8DSFWK2ARdnaSYcAHwcajaB89DdFqi2o6LaC4DLROMEoMDpAGC/xz1IL1@huZa6ZOAFNYOVia2eKak8ii1GWYsV/zhrMtzOdgcddbpa6T@Svzf5ZgKUt/R//YmPED "Wolfram Language (Mathematica) – Try It Online"
+[TIO-kxgwc3hu]: https://tio.run/##XU29CsMgEN7zFEKgkyGemdLW4iN06BashFJpIOkQMiSIz25PRZoWPP3@/G7ql9dz6pfh0XtvpNZawJkVpmN0RUJHrY5iFOI2d3C3q1No9Tp49cnIlW46BFCrgG7KX@fhvXQlqS7EEClJqQ6kloW1jBLmaEEsIEgnUgRt@50mijwGIAzGAWmDTxRDCBGPN2ScvqXCXAt5HWRlvze1pWYelSYtzbE92Mf4r/WPnfMf "Wolfram Language (Mathematica) – Try It Online"
