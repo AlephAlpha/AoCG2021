@@ -4,32 +4,33 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 
 ## Records
 
-|         |                    PARI/GP |                         Mathematica |
-| :------ | -------------------------: | ----------------------------------: |
-| [Day1]  |      [89](Day1/pari-gp.md) |       [98](Day1/mathematica.md)[^2] |
-| [Day2]  |      [71](Day2/pari-gp.md) |           [68](Day2/mathematica.md) |
-| [Day3]  |      [89](Day3/pari-gp.md) |       [83](Day3/mathematica.md)[^1] |
-| [Day4]  |  [32](Day4/pari-gp.md)[^3] |       [32](Day4/mathematica.md)[^1] |
-| [Day5]  | [144](Day5/pari-gp.md)[^4] |           [89](Day5/mathematica.md) |
-| [Day6]  |  [52](Day6/pari-gp.md)[^5] |       [49](Day6/mathematica.md)[^5] |
-| [Day7]  |      [69](Day7/pari-gp.md) |           [76](Day7/mathematica.md) |
-| [Day8]  |     [118](Day8/pari-gp.md) |          [107](Day8/mathematica.md) |
-| [Day9]  |  [87](Day9/pari-gp.md)[^6] |       [76](Day9/mathematica.md)[^6] |
-| [Day10] |     [65](Day10/pari-gp.md) |          [78](Day10/mathematica.md) |
-| [Day11] |     [78](Day11/pari-gp.md) |          [68](Day11/mathematica.md) |
-| [Day12] |     [32](Day12/pari-gp.md) |          [41](Day12/mathematica.md) |
-| [Day13] |    [181](Day13/pari-gp.md) |         [109](Day13/mathematica.md) |
-| [Day14] |     [59](Day14/pari-gp.md) |          [51](Day14/mathematica.md) |
-| [Day15] |     [89](Day15/pari-gp.md) |          [79](Day15/mathematica.md) |
-| [Day16] |    [459](Day16/pari-gp.md) |         [373](Day16/mathematica.md) |
-| [Day17] |    [110](Day17/pari-gp.md) |          [77](Day17/mathematica.md) |
-| [Day18] |     [98](Day18/pari-gp.md) |          [89](Day18/mathematica.md) |
-| [Day19] |    [181](Day19/pari-gp.md) |         [156](Day19/mathematica.md) |
-| [Day20] | [81](Day20/pari-gp.md)[^7] |      [65](Day20/mathematica.md)[^7] |
-| [Day21] |     [45](Day21/pari-gp.md) |      [61](Day21/mathematica.md)[^1] |
-| [Day22] |    [179](Day22/pari-gp.md) | [107](Day22/mathematica.md)[^2][^8] |
-| [Day23] |    [151](Day23/pari-gp.md) |          [95](Day23/mathematica.md) |
-| Day24   |     [48](Day24/pari-gp.md) |          [48](Day24/mathematica.md) |
+|         |                     PARI/GP |                         Mathematica |
+| :------ | --------------------------: | ----------------------------------: |
+| [Day1]  |       [89](Day1/pari-gp.md) |       [98](Day1/mathematica.md)[^2] |
+| [Day2]  |       [71](Day2/pari-gp.md) |           [68](Day2/mathematica.md) |
+| [Day3]  |       [89](Day3/pari-gp.md) |       [83](Day3/mathematica.md)[^1] |
+| [Day4]  |   [32](Day4/pari-gp.md)[^3] |       [32](Day4/mathematica.md)[^1] |
+| [Day5]  |  [144](Day5/pari-gp.md)[^4] |           [89](Day5/mathematica.md) |
+| [Day6]  |   [52](Day6/pari-gp.md)[^5] |       [49](Day6/mathematica.md)[^5] |
+| [Day7]  |       [69](Day7/pari-gp.md) |           [76](Day7/mathematica.md) |
+| [Day8]  |      [118](Day8/pari-gp.md) |          [107](Day8/mathematica.md) |
+| [Day9]  |   [87](Day9/pari-gp.md)[^6] |       [76](Day9/mathematica.md)[^6] |
+| [Day10] |      [65](Day10/pari-gp.md) |          [78](Day10/mathematica.md) |
+| [Day11] |      [78](Day11/pari-gp.md) |          [68](Day11/mathematica.md) |
+| [Day12] |      [32](Day12/pari-gp.md) |          [41](Day12/mathematica.md) |
+| [Day13] |     [181](Day13/pari-gp.md) |         [109](Day13/mathematica.md) |
+| [Day14] |      [59](Day14/pari-gp.md) |          [51](Day14/mathematica.md) |
+| [Day15] |      [89](Day15/pari-gp.md) |          [79](Day15/mathematica.md) |
+| [Day16] |     [459](Day16/pari-gp.md) |         [373](Day16/mathematica.md) |
+| [Day17] |     [110](Day17/pari-gp.md) |          [77](Day17/mathematica.md) |
+| [Day18] |      [98](Day18/pari-gp.md) |          [89](Day18/mathematica.md) |
+| [Day19] |     [181](Day19/pari-gp.md) |         [156](Day19/mathematica.md) |
+| [Day20] |  [81](Day20/pari-gp.md)[^7] |      [65](Day20/mathematica.md)[^7] |
+| [Day21] |      [45](Day21/pari-gp.md) |      [61](Day21/mathematica.md)[^1] |
+| [Day22] |     [179](Day22/pari-gp.md) | [107](Day22/mathematica.md)[^2][^8] |
+| [Day23] |     [151](Day23/pari-gp.md) |          [95](Day23/mathematica.md) |
+| [Day24] |      [45](Day24/pari-gp.md) |      [48](Day24/mathematica.md)[^1] |
+| [Day25] | [114](Day25/pari-gp.md)[^6] |     [102](Day25/mathematica.md)[^6] |
 
 [^1]: Not posted because there are better answers.
 [^2]: Golfed by [att] after posted.
@@ -70,3 +71,5 @@ Solutions to Bubbler's [Advent of Code Golf 2021] challenges.
 [Day21]: https://codegolf.stackexchange.com/q/239921/9288
 [Day22]: https://codegolf.stackexchange.com/q/239985/9288
 [Day23]: https://codegolf.stackexchange.com/q/240073/9288
+[Day24]: https://codegolf.stackexchange.com/q/240105/9288
+[Day25]: https://codegolf.stackexchange.com/q/240140/9288
